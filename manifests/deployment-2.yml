@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "breastcancerkubernetescluster-d849"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "breastcancerkubernetescluster-d849"
+  template:
+    metadata:
+      labels:
+        app: "breastcancerkubernetescluster-d849"
+    spec:
+      containers:
+        - name: "breastcancerkubernetescluster-d849"
+          image: "breastcancer.azurecr.io/breastcancerkubernetescluster"
+          ports:
+          - containerPort: 80
